@@ -8,12 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 
 class MainActivity : AppCompatActivity() {
-
     private val tag = this.javaClass.simpleName
-
-    companion object {
-
-    }
 
     private var mPlanetTitles: ArrayList<String> = ArrayList()
     private lateinit var mDrawerLayout: DrawerLayout
