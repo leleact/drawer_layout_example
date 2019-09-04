@@ -8,7 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 
 class MainActivity : AppCompatActivity() {
-    private val tag = this.javaClass.simpleName
+
+    companion object {
+        private val TAG = MainActivity::class.java.simpleName
+    }
 
     private var mPlanetTitles: ArrayList<String> = ArrayList()
     private lateinit var mDrawerLayout: DrawerLayout
@@ -62,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
         mDrawerLayout.addDrawerListener(object : DrawerLayout.DrawerListener {
             override fun onDrawerStateChanged(newState: Int) {
-                Log.d(tag, "" + newState)
+                Log.d(TAG, "" + newState)
             }
 
             override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
